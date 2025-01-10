@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/* Mengimpor font "Albert Sans" dan "Poppins" dari Google Fonts*/    
+
+* {
+    margin: 0px;  /* Menghapus margin default untuk semua elemen */
+    padding: 0px;  /* Menghapus padding default untuk semua elemen */
+    box-sizing: border-box; /* Memastikan padding dan border dihitung dalam ukuran elemen, bukan ditambahkan ke lebar/tinggi elemen */
+    font-family: "Poppins", serif;  /* Mengatur font default semua elemen ke "Poppins" */
+}
+
+/* HOME */
+body{
+    background-color: #EEF7FF; /* Mengatur warna latar belakang header menjadi biru muda */
+}
+
+/* NAVBAR */
+header{
+    background-color: rgb(255, 255, 255); /* Mengatur warna latar belakang header menjadi putih */
+    position: fixed; /* Memastikan header tetap di atas saat halaman di-scroll */
+    top: 0; /* Memulai header di bagian atas halaman */
+    left: 0; /* Memulai header di bagian kiri halaman */
+    width: 100%; /* Lebar header se panjang seluruh layar */
+    height: 70px; /* Tinggi header diatur 70px */
+    padding-left: 100px ; /* Memberi jarak kiri untuk konten di dalam header */
+    display: flex; /* Menggunakan flexbox untuk tata letak header */
+    z-index: 1000; /* Menempatkan header di atas elemen lain */
+    justify-content: space-between; /* Membuat konten agar berletak di ujung kanan dan kiri */
+    align-items: center; /* Mmebuat konten agar berada di tengah secara vertikal */
+}
+
+.navbar{
+    display: flex; /* Mengatur elemen di dalam navbar menggunakan flexbox */
+    align-items: center; /* Mmebuat konten agar berada di tengah secara vertikal */
+}
+
+.logo img{
+    height: 100px; /* Mengatur tinggi gambar logo*/
+    width: auto; /* Membuat lebar logo sesuai dengan tinggi */
+}
+
+.navbar ul {
+    list-style-type: none; /* Menghilangkan list pada daftar*/
+    margin-left: 35px; /* Memberi jarak antara logo dan navbar*/
+    display: flex; /* Mengatur elemen menu agar satu baris*/
+}
+
+.navbar li a{
+    position: relative; /* Mengatur posisi elemen untuk efek hover*/
+    text-decoration: none; /* Menghapus garis bawah pada tautan */
+    padding: 8px 0px; /* Memberi jarak atas dan bawah pada teks */
+    margin-right: 30px; /* Memberi jarak antar item menu */
+    font-family: "Albert Sans", serif; /* Mengubah font menjadi "Albert Sans" */
+    color: #000; /* Warna teks hitam */
+    font-weight: 400; /* Mengubah ketebalan font */
+    font-size: 18px; /* Mengatur ukuran font */
+}
+
+.navbar li a::before{
+    content: ''; /* Menambahkan elemen kosong sebelum teks */
+    position: absolute; /* Menempatkan elemen relatif ke teks */
+    top: 100%; /* Menempatkan elemen di bawah teks */
+    left: 0px; /* Memulai garis dari sisi kiri teks */
+    width: 0px; /* Membuat agar gari awalnya tidak terlihat */
+    height: 2.5px; /* Ketebalan garis bawah */
+    background: #000; /* Warna garis hitam */
+    transition: .3s ease; /* Efek transisi untuk animasi */
+}
+
+.navbar li a:hover::before{
+    width: 100%; /* Memperluas garis bawah saat di-hover */
+}
+
+/* Styling untuk tombol login */
+.btn_login {
+    font-family: "Albert Sans", serif; /* Menggunakan font "Albert Sans" */
+    text-decoration: none; /* Menghapus garis bawah */
+    color: black; /* Warna teks hitam */
+    font-size: 18px; /* Ukuran font 18px */
+    font-weight: 400; /* Ketebalan font normal */
+    background-color: #38B6FF; /* Warna latar belakang biru */
+    margin-right: 10%; /* Memberi jarak kanan tombol */
+    padding: 10px 30px; /* Padding untuk ukuran tombol */
+    border-radius: 10%; /* Membuat sudut tombol melengkung */
+    transition: .3s; /* Efek transisi untuk hover */
+}
+
+.btn_login:hover{
+    background-color: #76CCFF; /* Mengubah warna tombol saat di-hover */
+} 
+
+/* FOOTER */
+
+footer{
+    padding: 80px 13% 70px;
+}
+
+.footer{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, auto));
+    gap: 3.5 rem;
+    background-color: #fff;
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+
+.footer_content{
+    margin: 0px auto;
+}
+
+.footer_content img{
+    width: 150px;
+    margin-top: 0px;
+}
+
+.footer_content span{
+    width: 100%;
+    text-align: start;
+}
+
+.footer_content p{
+    width: 350px;
+    line-height: 1.6;
+}
+
+.footer_content h4{
+    color: #000;
+    margin-top: 50px;
+    margin-bottom: 1.5rem;
+    font-size: 20px;
+}
+
+.footer_content li{
+    margin-bottom: 16px;
+    list-style-type: none;
+}
+
+.footer_content li a{
+    display: block;
+    text-decoration: none;
+    color: #000;
+    font-size: 15px;
+    font-weight: 400;
+    transition: all .40s ease;
+}
+
+.footer_content li a:hover{
+    transform: translateY(-3px) translateX(-5px);
+    color: #000;
+}
+
+.icons a{
+    margin-top: 15PX;
+    display: inline-block;
+    font-size: 22px;
+    color: #000;
+    margin-right: 17px;
+    transition: all .40s ease;
+}
+
+.icons a:hover{
+    color: #000;
+    transform: translateY(-5px);
+}
+
+@media (max-width: 700px) {
+    footer {
+        padding: 40px 5% 30px;
+    }
+
+    .footer {
+        grid-template-columns: 1fr; /* Susun dalam satu kolom */
+        gap: 2rem;
+    }
+
+    .footer_content {
+        text-align: center;
+    }
+
+    .footer_content img {
+        width: 120px; /* Ukuran gambar lebih kecil */
+        margin-bottom: 10px;
+    }
+
+    .footer_content h4 {
+        font-size: 16px;
+    }
+
+    .footer_content p {
+        font-size: 12px;
+        line-height: 1.5;
+    }
+
+    .footer_content li a {
+        font-size: 13px;
+    }
+
+    .icons a {
+        font-size: 18px;
+        margin: 0 8px;
+    }
+}
